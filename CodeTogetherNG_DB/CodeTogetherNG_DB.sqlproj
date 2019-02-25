@@ -14,8 +14,8 @@
     </RootPath>
     <RootNamespace>CodeTogetherNG_DB</RootNamespace>
     <AssemblyName>CodeTogetherNG_DB</AssemblyName>
-    <ModelCollation>1033, CI</ModelCollation>
-    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetLanguage>CS</TargetLanguage>
@@ -23,6 +23,8 @@
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Latin1_General_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -57,5 +59,41 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="Tables\" />
+    <Folder Include="Views\" />
+    <Folder Include="Security\" />
+    <Folder Include="Stored Procedures\" />
+    <Folder Include="User Defined Types\" />
+    <Folder Include="Snapshots" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\__EFMigrationsHistory.sql" />
+    <Build Include="Tables\AspNetRoles.sql" />
+    <Build Include="Tables\AspNetUsers.sql" />
+    <Build Include="Tables\AspNetRoleClaims.sql" />
+    <Build Include="Tables\AspNetUserClaims.sql" />
+    <Build Include="Tables\AspNetUserLogins.sql" />
+    <Build Include="Tables\AspNetUserRoles.sql" />
+    <Build Include="Tables\AspNetUserTokens.sql" />
+    <Build Include="Tables\Project.sql" />
+    <Build Include="Tables\Logs.sql" />
+    <Build Include="Tables\Technology.sql" />
+    <Build Include="Tables\ProjectTechnology.sql" />
+    <Build Include="Views\Grid_View.sql" />
+    <Build Include="Security\codetogetherng.sql" />
+    <Build Include="Security\codetogetherng_1.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="Stored Procedures\Project_Search.sql" />
+    <Build Include="Stored Procedures\Project_Details.sql" />
+    <Build Include="Stored Procedures\Technology_List.sql" />
+    <Build Include="Stored Procedures\Project_Add.sql" />
+    <Build Include="Stored Procedures\Projects_Get.sql" />
+    <Build Include="Stored Procedures\Logs_Add.sql" />
+    <Build Include="User Defined Types\TechnologyList.sql" />
+    <Build Include="Security\Permissions.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Snapshots\CodeTogetherNG_DB_20190225_19-29-35.dacpac" />
+    <None Include="Snapshots\CodeTogetherNG_DB_20190225_19-46-34.dacpac" />
   </ItemGroup>
 </Project>
