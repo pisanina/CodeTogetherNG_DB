@@ -1,3 +1,3 @@
 ﻿CREATE LOGIN [codetogetherng]
-    WITH PASSWORD = N'|fvsiuvxkirsh%kxzpnmxpekmsFT7_&#$!~<w{iwleYardw=', SID = 0xA25B89F5498B6D43B882D93BF0D8E903, DEFAULT_LANGUAGE = [us_english], CHECK_POLICY = OFF;
+    WITH PASSWORD = N'|fvsiuvxkirsh%kxzpnmxpekmsFT7_&#$!~<w{iwleYardw=', SID = 0xA25B89F5498B6D43B882D93BF0D8E903;
 
