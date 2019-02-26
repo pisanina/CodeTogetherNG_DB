@@ -2,7 +2,7 @@
  Create PROCEDURE [dbo].[Project_Add] @Title Nvarchar(50), @Description Nvarchar(1000),
  @TechList TechnologyList readonly, @UserName Nvarchar(256)
   AS
-	Declare @UserId Nvarchar(256)
+	Declare @UserId Nvarchar(450)
 	Set @UserId = (Select Id from AspNetUsers Where UserName = @UserName)
     IF Exists (Select 1 from @TechList)
     begin
