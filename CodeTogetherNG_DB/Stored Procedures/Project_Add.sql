@@ -20,7 +20,9 @@
   end
   ELSE 
   Insert into Project (Title, Description, OwnerId) Values ( @Title,  @Description, @UserId)
+GO
+
 GRANT EXECUTE
     ON OBJECT::[dbo].[Project_Add] TO [codetogetherng]
-    AS [dbo];
+GO
 
