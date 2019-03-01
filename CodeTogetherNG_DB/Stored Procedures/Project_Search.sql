@@ -1,11 +1,10 @@
 ﻿CREATE PROC [dbo].[Project_Search] @ToFind Nvarchar(50), @TechList TechnologyList readonly
 AS
-
 Declare @TechCount int
 set @TechCount = (select count(Id) from @TechList)
- 
 
-SELECT Grid_View.ID, Title, [Description], TechName, TechnologyId FROM Grid_View  
+SELECT Grid_View.*, TechName, TechnologyId 
+FROM Grid_View  
 Left Join ProjectTechnology On (Grid_View.ID=ProjectTechnology.ProjectId)
 Left Join Technology On (ProjectTechnology.TechnologyId=Technology.Id) 
 WHERE (Title LIKE '%'+@ToFind+'%' OR [Description] LIKE '%'+@ToFind+'%')

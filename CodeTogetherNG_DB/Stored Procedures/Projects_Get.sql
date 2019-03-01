@@ -1,6 +1,6 @@
 ﻿CREATE PROCEDURE [dbo].[Projects_Get] 
 AS
-  Select Grid_View.ID, Title, [Description], TechName, TechnologyId
+  Select Grid_View.*, TechName, TechnologyId
   From Grid_View
    Left Join ProjectTechnology On (Grid_View.ID=ProjectTechnology.ProjectId)
    Left Join Technology On (ProjectTechnology.TechnologyId=Technology.Id) 
