@@ -4,7 +4,7 @@
 	[Description] [nvarchar](1000) NULL,
 	[CreationDate] [datetimeoffset](7) NOT NULL,
 	[OwnerId] [nvarchar](450) NOT NULL,
-	[NewMember] [bit] NOT NULL Constraint DF_Project_NewMembers Default (0),
+	[NewMembers] [bit] NOT NULL Constraint DF_Project_NewMembers Default (0),
  CONSTRAINT [PK_Project1] PRIMARY KEY CLUSTERED 
 (
 	[ID] ASC
