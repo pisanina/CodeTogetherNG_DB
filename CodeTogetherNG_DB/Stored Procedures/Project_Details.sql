@@ -1,6 +1,6 @@
 ﻿CREATE Procedure [dbo].[Project_Details] @FindId Int
   AS
-  Select Project.ID, Title, [Description], UserName, FORMAT(CreationDate, 'dd/MM/yyyy') AS CreationDate, TechName, TechnologyId
+  Select Project.ID, Title, [Description], UserName, NewMembers, FORMAT(CreationDate, 'dd/MM/yyyy') AS CreationDate, TechName, TechnologyId
   From Project
    Left Join ProjectTechnology On (Project.ID=ProjectTechnology.ProjectId)
    Left Join Technology On (ProjectTechnology.TechnologyId=Technology.Id) 
