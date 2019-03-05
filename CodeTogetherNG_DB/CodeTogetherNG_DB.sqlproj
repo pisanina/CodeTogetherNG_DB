@@ -91,6 +91,8 @@
     <Build Include="Stored Procedures\Logs_Add.sql" />
     <Build Include="User Defined Types\TechnologyList.sql" />
     <Build Include="Security\Permissions.sql" />
+    <Build Include="Stored Procedures\Project_Edit.sql" />
+    <Build Include="Stored Procedures\ProjectOwnerName.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Snapshots\CodeTogetherNG_DB_20190225_19-29-35.dacpac" />
