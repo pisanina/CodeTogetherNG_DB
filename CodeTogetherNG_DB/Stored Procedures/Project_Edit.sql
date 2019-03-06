@@ -1,11 +1,11 @@
 ﻿ Create PROCEDURE [dbo].[Project_Edit] @Id int, @Title Nvarchar(50), @Description Nvarchar(1000),
- @TechList TechnologyList readonly, @NewMembers bit
+ @TechList TechnologyList readonly, @NewMembers bit, @StateId int
  AS
   begin
 		begin Try
 			 BEGIN TRANSACTION
 				Update Project SET Title = @Title, Description = @Description, 
-						NewMembers = @NewMembers
+						NewMembers = @NewMembers, StateId = @StateId
 						where Id=@Id
 				Delete From ProjectTechnology where ProjectId = @Id
 				Insert Into ProjectTechnology (ProjectId, TechnologyId) Select @Id, Id from @TechList

@@ -93,6 +93,8 @@
     <Build Include="Security\Permissions.sql" />
     <Build Include="Stored Procedures\Project_Edit.sql" />
     <Build Include="Stored Procedures\ProjectOwnerName.sql" />
+    <Build Include="Stored Procedures\State_List.sql" />
+    <Build Include="Tables\ProjectState.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Snapshots\CodeTogetherNG_DB_20190225_19-29-35.dacpac" />

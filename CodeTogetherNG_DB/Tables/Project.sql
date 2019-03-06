@@ -5,6 +5,9 @@
 	[CreationDate] [datetimeoffset](7) NOT NULL,
 	[OwnerId] [nvarchar](450) NOT NULL,
 	[NewMembers] [bit] NOT NULL Constraint DF_Project_NewMembers Default (0),
+	[StateId] [int] Not Null Constraint DF_Project_ProjectStatus Default(1),
+
+
  CONSTRAINT [PK_Project1] PRIMARY KEY CLUSTERED 
 (
 	[ID] ASC
@@ -21,6 +24,10 @@ GO
 
 ALTER TABLE [dbo].[Project]  WITH CHECK ADD  CONSTRAINT [FK_UserProject] FOREIGN KEY([OwnerId])
 REFERENCES [dbo].[AspNetUsers] ([Id])
+GO
+
+ALTER TABLE [dbo].[Project]  WITH CHECK ADD  CONSTRAINT [FK_ProjectState] FOREIGN KEY([StateId])
+REFERENCES [dbo].[ProjectState] ([Id])
 GO
 
 ALTER TABLE [dbo].[Project] CHECK CONSTRAINT [FK_UserProject]
