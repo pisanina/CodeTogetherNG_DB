@@ -4,5 +4,5 @@ Select ID, Title, Description =
   Case
   When LEN(Description) > 50 then Substring(Description, 1, 50)+'...'
   else Description 
-  END, CreationDate, NewMembers 
+  END, CreationDate, NewMembers, StateId  
   From Project 
