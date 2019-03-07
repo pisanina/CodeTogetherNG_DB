@@ -8,7 +8,7 @@ SELECT Grid_View.*, TechName, TechnologyId
 FROM Grid_View  
 Left Join ProjectTechnology On (Grid_View.ID=ProjectTechnology.ProjectId)
 Left Join Technology On (ProjectTechnology.TechnologyId=Technology.Id) 
-WHERE (Title LIKE '%'+@ToFind+'%' OR [Description] LIKE '%'+@ToFind+'%') 
+WHERE (@ToFind IS NULL OR Title LIKE '%'+@ToFind+'%' OR [Description] LIKE '%'+@ToFind+'%') 
 AND (@NewMembers IS Null OR NewMembers=@NewMembers)
 AND (@StateId IS Null OR StateId=@StateId)
 AND
