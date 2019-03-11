@@ -97,6 +97,9 @@
     <Build Include="Tables\ProjectState.sql" />
     <Build Include="Tables\ProjectMember.sql" />
     <Build Include="Stored Procedures\ProjectMember_NewRequest.sql" />
+    <Build Include="Stored Procedures\RequestsCount.sql" />
+    <Build Include="Stored Procedures\RequestsList.sql" />
+    <Build Include="Stored Procedures\AcceptMember.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Snapshots\CodeTogetherNG_DB_20190225_19-29-35.dacpac" />
