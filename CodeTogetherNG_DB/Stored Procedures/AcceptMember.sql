@@ -1,8 +1,8 @@
-﻿ Create Procedure AcceptMember @ProjectId int, @MemberId nvarchar(450), @Accept bit
+﻿ Create Procedure [dbo].[AcceptMember] @Id int, @Accept bit
 	 AS 
 	 Update ProjectMember 
 	 SET AddMember = @Accept
-	 where (ProjectId = @ProjectId AND MemberId = @MemberId)
+	 where (Id = @Id )
 
 	 GO
 	 Grant EXECUTE ON AcceptMember to codetogetherng

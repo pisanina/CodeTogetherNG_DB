@@ -1,6 +1,6 @@
-﻿CREATE Procedure RequestsList @ProjectId int
+﻿CREATE Procedure [dbo].[RequestsList] @ProjectId int
 	 AS
-	 Select UserName, [Message], MemberId, Title, @ProjectId AS ProjectId,
+	 Select ProjectMember.Id AS RequestId, UserName, [Message], MemberId, Title, @ProjectId AS ProjectId,
 	 FORMAT(MessageDate, 'dd/MM/yyyy') AS MessageDate, AddMember AS Accept
 	 From ProjectMember
 	 Join AspNetUsers On (ProjectMember.MemberId=AspNetUsers.Id)
