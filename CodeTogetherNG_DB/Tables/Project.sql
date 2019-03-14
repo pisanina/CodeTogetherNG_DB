@@ -6,6 +6,7 @@
 	[OwnerId] [nvarchar](450) NOT NULL,
 	[NewMembers] [bit] NOT NULL Constraint DF_Project_NewMembers Default (0),
 	[StateId] [int] Not Null Constraint DF_Project_ProjectStatus Default(1),
+	[Deleted] [bit] NOT NULL CONSTRAINT DF_Project_Deleted DEFAULT (0),
 
 
  CONSTRAINT [PK_Project1] PRIMARY KEY CLUSTERED 

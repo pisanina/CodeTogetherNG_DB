@@ -6,7 +6,7 @@
    Left Join ProjectTechnology On (Project.ID=ProjectTechnology.ProjectId)
    Left Join Technology On (ProjectTechnology.TechnologyId=Technology.Id) 
    Join AspNetUsers On (AspNetUsers.Id=Project.OwnerId)
-   Where Project.ID = @FindId 
+   Where Project.ID = @FindId AND Project.Deleted = 0
 GO
 GRANT EXECUTE
     ON OBJECT::[dbo].[Project_Details] TO [codetogetherng]

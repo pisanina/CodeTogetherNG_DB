@@ -6,3 +6,4 @@ Select ID, Title, Description =
   else Description 
   END, CreationDate, NewMembers, StateId  
   From Project 
+  WHERE Deleted = 0
