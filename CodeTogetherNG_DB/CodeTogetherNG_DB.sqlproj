@@ -103,6 +103,11 @@
     <Build Include="Stored Procedures\MembersList.sql" />
     <Build Include="Stored Procedures\GetMemberShipState.sql" />
     <Build Include="Stored Procedures\Project_Delete.sql" />
+    <Build Include="Tables\UserTechnologyLevel.sql" />
+    <Build Include="Stored Procedures\TechnologyLevel_Change.sql" />
+    <Build Include="Stored Procedures\TechnologyLevel_Delete.sql" />
+    <Build Include="Stored Procedures\TechnologyLevel_Add.sql" />
+    <Build Include="Stored Procedures\GetListTechnologyLevel.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Snapshots\CodeTogetherNG_DB_20190225_19-29-35.dacpac" />
