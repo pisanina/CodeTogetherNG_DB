@@ -107,6 +107,7 @@
     <Build Include="Stored Procedures\TechnologyLevel_Delete.sql" />
     <Build Include="Stored Procedures\TechnologyLevel_Add.sql" />
     <Build Include="Stored Procedures\GetListTechnologyLevel.sql" />
+    <Build Include="Stored Procedures\Users_List.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Snapshots\CodeTogetherNG_DB_20190225_19-29-35.dacpac" />
