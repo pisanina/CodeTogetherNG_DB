@@ -1,7 +1,7 @@
 ﻿Create Procedure Users_List
 AS
 SELECT AllUsers.UserName, IsNull(OwnerOf, 0) AS OwnerOf, IsNull(MemberOf,0) As MemberOf, 
-		IsNULL(BeginnerIn, 0) AS BegginerIn, IsNull(AdvancedIn, 0) AS AdvancedIn, IsNull(ExpertIn,0 ) AS ExpertIn FROM 
+		IsNULL(BeginnerIn, 0) AS BeginnerIn, IsNull(AdvancedIn, 0) AS AdvancedIn, IsNull(ExpertIn,0 ) AS ExpertIn FROM 
 ( Select UserName From AspNetUsers ) As AllUsers
 	Left Join
 	(
