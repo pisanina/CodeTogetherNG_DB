@@ -1,4 +1,4 @@
-﻿Create Procedure Users_List
+﻿Create Procedure [dbo].[Users_List]
 AS
 SELECT AllUsers.UserName, IsNull(OwnerOf, 0) AS OwnerOf, IsNull(MemberOf,0) As MemberOf, 
 		IsNULL(BeginnerIn, 0) AS BeginnerIn, IsNull(AdvancedIn, 0) AS AdvancedIn, IsNull(ExpertIn,0 ) AS ExpertIn FROM 
@@ -15,7 +15,7 @@ SELECT AllUsers.UserName, IsNull(OwnerOf, 0) AS OwnerOf, IsNull(MemberOf,0) As M
 			From AspNetUsers 
 				Join ProjectMember On AspNetUsers.Id = ProjectMember.MemberId
 			Group By UserName
-	) As MemberCount On OwnerCount.UserName = MemberCount.UserName
+	) As MemberCount On AllUsers.UserName = MemberCount.UserName
 	Left Join 
 	(
 		Select UserName
@@ -25,7 +25,7 @@ SELECT AllUsers.UserName, IsNull(OwnerOf, 0) AS OwnerOf, IsNull(MemberOf,0) As M
 			From AspNetUsers
 				Left Join UserTechnologyLevel ON AspNetUsers.Id = UserTechnologyLevel.UserId
 			Group by UserName 
-	) AS skillLevels ON  OwnerCount.UserName=skillLevels.UserName 
+	) AS skillLevels ON  AllUsers.UserName=skillLevels.UserName 
 
 GO
   Grant EXECUTE ON Users_List to codetogetherng 
