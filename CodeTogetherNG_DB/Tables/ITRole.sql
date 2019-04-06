@@ -1,0 +1,1 @@
+﻿ Create Table ITRole (Id int not null Identity(1,1) Primary Key, [Role] varchar(30) not null)

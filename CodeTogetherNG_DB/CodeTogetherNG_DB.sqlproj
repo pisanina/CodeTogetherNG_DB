@@ -65,6 +65,7 @@
     <Folder Include="Stored Procedures\" />
     <Folder Include="User Defined Types\" />
     <Folder Include="Snapshots" />
+    <Folder Include="PostDeploymentScripts" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\__EFMigrationsHistory.sql" />
@@ -109,9 +110,18 @@
     <Build Include="Stored Procedures\GetListTechnologyLevel.sql" />
     <Build Include="Stored Procedures\Users_List.sql" />
     <Build Include="Stored Procedures\GetProjectTitleForUser.sql" />
+    <Build Include="Stored Procedures\ITRole_Add.sql" />
+    <Build Include="Stored Procedures\ITRole_List.sql" />
+    <Build Include="Stored Procedures\ITRole_Delete.sql" />
+    <Build Include="Stored Procedures\GetUserITRoles.sql" />
+    <Build Include="Tables\ITRole.sql" />
+    <Build Include="Tables\UserITRole.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Snapshots\CodeTogetherNG_DB_20190225_19-29-35.dacpac" />
     <None Include="Snapshots\CodeTogetherNG_DB_20190225_19-46-34.dacpac" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="PostDeploymentScripts\InsertITRoles.sql" />
   </ItemGroup>
 </Project>

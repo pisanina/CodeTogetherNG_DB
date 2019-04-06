@@ -4,3 +4,7 @@
 , TechnologyId int constraint FK_UserTechnologyLevel_Technology FOREIGN KEY REFERENCES Technology(id)
 , TechLevel int not null
 , CONSTRAINT UC_UserTechnologyLevel_UserId_TechnologyId UNIQUE (UserId, TechnologyId))
+GO
+
+ALTER TABLE UserTechnologyLevel ADD CONSTRAINT PK_UserTechnologyLevel PRIMARY KEY  (ID)
+Go
