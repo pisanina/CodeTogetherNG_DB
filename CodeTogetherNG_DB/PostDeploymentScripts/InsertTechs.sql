@@ -9,13 +9,13 @@ Post-Deployment Script Template
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
-
-IF ((select Count(Id) from ITRole) = 0)
+IF ((select Count(Id) from Technology) = 0)
 begin
-Insert INTO ITRole 
-Values ('Automation Tester'),('Back-end Developer'),
-  ('Business Analyst'), ('Configuration Engineer'), ('DBA'), ('Delivery Manager'), 
-  ('Full-stack developer'), ('Front-end Developer'), ('Incident Manager'), 
-  ('Infrastructure Engineer'), ('Project Owner'), ('Release Manager'), 
-  ('Solution Architect'), ('Tester'),('Technical Architect');
+Insert INTO Technology 
+Values ('Angular'),('Assembly'),
+  ('C'), ('C++'), ('C#'), ('Java'), 
+  ('JavaScript'), ('jQuery'), ('Laravel'), 
+  ('.NET'), ('.NetCore'), ('Node JS'), 
+  ('Objective-C'), ('Python'), ('Pl/SQL'),
+  ('React'), ('Swift'),('Visual Basic');
 end

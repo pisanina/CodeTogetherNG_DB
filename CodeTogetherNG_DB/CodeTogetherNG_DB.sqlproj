@@ -123,5 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="PostDeploymentScripts\InsertITRoles.sql" />
+    <None Include="PostDeploymentScripts\InsertTechs.sql" />
+    <None Include="PostDeploymentScripts\InsertProjectStates.sql" />
   </ItemGroup>
 </Project>

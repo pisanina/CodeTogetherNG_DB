@@ -9,13 +9,8 @@ Post-Deployment Script Template
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
-
-IF ((select Count(Id) from ITRole) = 0)
+IF ((select Count(Id) from ProjectState) = 0)
 begin
-Insert INTO ITRole 
-Values ('Automation Tester'),('Back-end Developer'),
-  ('Business Analyst'), ('Configuration Engineer'), ('DBA'), ('Delivery Manager'), 
-  ('Full-stack developer'), ('Front-end Developer'), ('Incident Manager'), 
-  ('Infrastructure Engineer'), ('Project Owner'), ('Release Manager'), 
-  ('Solution Architect'), ('Tester'),('Technical Architect');
+Insert INTO ProjectState 
+Values (1, 'Preparing'), (2, 'In Progress'), (3, 'Closed');
 end
